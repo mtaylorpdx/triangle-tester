@@ -12,11 +12,11 @@ $(document).ready(function() {
         alert ("That's not a triangle!");
       } else if (side1 === side2 || side1 === side3 || side2 === side3) {
         alert("Isosceles");
-      } else if (side1 !== side2 && side1 !== side3 && side2 !== side3) {
-        alert("Scalene");
       } else {
-        alert("Go back to school.");
-      }
+        alert("Scalene");
+      } 
+    } else {
+      alert("Go back to school.");
     }
     event.preventDefault();
   });
