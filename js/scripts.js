@@ -6,10 +6,10 @@ $(document).ready(function() {
     var side3 = parseInt($("#input3").val());
 
     if (side1 && side2 && side3) {
-      if (side1 === side2 && side1 === side3) {
-        alert("Equilateral");
-      } else if ((side1 + side2) <= side3 || (side1 + side3) <= side2 || (side2 + side3) <= side1) {
+      if ((side1 + side2) <= side3 || (side1 + side3) <= side2 || (side2 + side3) <= side1) {
         alert ("That's not a triangle!");
+      } else if (side1 === side2 && side1 === side3) {
+        alert("Equilateral");
       } else if (side1 === side2 || side1 === side3 || side2 === side3) {
         alert("Isosceles");
       } else {
@@ -21,3 +21,11 @@ $(document).ready(function() {
     event.preventDefault();
   });
 });
+
+
+
+if (side1 === side2 && side1 === side3) {
+  alert("Equilateral");
+} else if ((side1 + side2) <= side3 || (side1 + side3) <= side2 || (side2 + side3) <= side1) {
+  alert ("That's not a triangle!");
+} else if (side1 === side2 || side1 === side3 || side2 === side3) {
